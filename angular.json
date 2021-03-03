@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "quotation-list"
+  "defaultProject": "quotation-list",
+  "cli": {
+    "analytics": "1477fc4c-13f2-467c-95ab-ac7a5e9bd0f4"
+  }
 }

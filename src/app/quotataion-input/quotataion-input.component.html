@@ -1,0 +1,5 @@
+<div class="addQuotes">
+    <input type="text" class="quotesInput" placeholder="Dodaj cytat" [(ngModel)]="quotationValue.quotation"  (keyup)=" buttonDisabled()">
+    <input type="text" class="quotestAuthor" placeholder="Dodaj autora" [(ngModel)]="quotationValue.author" (keyup)=" buttonDisabled()">
+    <button class="addQuotation" (click)="addQoutatoin()" [disabled]="inputBoolean" (click)="buttonRestart()">+</button>
+</div>
