@@ -1,9 +1,9 @@
 <div class="quotationList" *ngFor="let quotes of quotesAll">
 
-    {{quotes.quotation}}<br>
-    {{quotes.author}}<br>
-    {{quotes.vote}}<br><br>
+<div class="quotesOutput">{{quotes.quotation}}</div>
+<div class="authorOutput">{{quotes.author}}</div>
+<div class="votesOutput">{{quotes.vote}}</div><br>
 
-    <button class="up" (click)="addVote(quotes, +1)">up</button>
-    <button class="down" (click)="addVote(quotes, -1)">down</button>
+    <button class="up" (click)="addVote(quotes, +1)">+</button>
+    <button class="down" (click)="addVote(quotes, -1)">-</button>
   </div>

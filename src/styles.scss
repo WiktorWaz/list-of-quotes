@@ -1,0 +1,43 @@
+//--- Default colors --//
+
+$first-color: #1b4079;
+$second-color: #4d7c8a;
+$third-color: #7f9c96;
+$fourth-color: #8fad88;
+$fifth-color: #cbdf90;
+
+//--- Main Scss --//
+* {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+section {
+  height: 100%
+}
+
+body {
+  text-align: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+#mainWraper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 0fr 0fr auto;
+}
+
+footer {
+  opacity: 0.6;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+
+}

@@ -1,11 +1,22 @@
-<header>
-  <h1>Lista cytatów</h1>
-  <button class="showInput">+</button>
-  <app-quotataion-input (newQuotation)="onNewQuotation($event)" (click)="sortList()"></app-quotataion-input>
-</header>
-<main>  
-  <app-list-items [quotesAll]="quotesAll" [quotesAll]="quotesAll" (newVote)="addVote($event.quotation, $event.vote)" (click)="sortList()"></app-list-items>
-</main>
-<footer>
-  2021 &copy; wszelkie prawa zastrzeżone
-</footer>
+<section>
+  <div id="mainWraper">
+    <header>
+      <h1>Lista cytatów</h1>
+      <button class="showInputButton" id="showButtonStyle" (click)="quotataionInput.showInputMethod($event)">+ Dodaj
+        cytat</button>
+    </header>
+    <main>
+      <div id="inputWraper">       
+          <app-quotataion-input (newQuotation)="onNewQuotation($event)" (click)="sortList()" #quotataionInput>
+          </app-quotataion-input>
+        <span *ngIf="quotesAll.length === 0"><h1 style="opacity: 0.5">{{emptyQuotes}}</h1></span>
+      </div>
+      <app-list-items [quotesAll]="quotesAll" [quotesAll]="quotesAll" (newVote)="addVote($event.quotation, $event.vote)"
+        (click)="sortList()" #quotationInput></app-list-items>
+    </main>
+
+    <footer>
+      {{ newDate | date: 'yyyy' }} &copy; wszelkie prawa zastrzeżone
+    </footer>
+  </div>
+</section>

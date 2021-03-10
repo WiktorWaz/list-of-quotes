@@ -1,15 +1,17 @@
 import { Quotations } from './../data/quotes-interface';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-quotataion-input',
   templateUrl: './quotataion-input.component.html',
-  styleUrls: ['./quotataion-input.component.sass']
+  styleUrls: ['./quotataion-input.component.scss']
 })
 export class QuotataionInputComponent  {
+  
 
+  showInput = false;
   inputBoolean = true;
-
+  
   @Output() newQuotation = new EventEmitter<Quotations>();
 
   quotationValue: Quotations = {quotation: '', author: '', vote: 0};
@@ -27,4 +29,7 @@ export class QuotataionInputComponent  {
     this.inputBoolean = true;
   }
 
+  showInputMethod() {
+    this.showInput = !this.showInput;
+  }
 }

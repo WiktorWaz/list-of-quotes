@@ -1,0 +1,38 @@
+@import '../../styles.scss';
+
+.up {
+    background-color: $fourth-color;
+    color: #fff;
+    border: 2px solid $fourth-color;
+    &:hover {
+        background-color: #000;
+        border: 2px solid #000;
+    }
+}
+
+.down {
+    background-color: $fifth-color;
+    color: #fff;
+    border: 2px solid $fifth-color;
+    &:hover {
+        background-color: #000;
+        border: 2px solid #000;
+    }
+}
+
+.quotesOutput   {
+    font-style:italic;
+    font-size: 1.2rem;
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.votesOutput    {
+    margin: 5px auto;
+    border: 1px solid #000;
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    text-align: center;
+    line-height: 1.7rem;
+}

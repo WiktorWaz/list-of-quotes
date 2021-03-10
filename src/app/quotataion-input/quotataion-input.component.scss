@@ -1,0 +1,28 @@
+@import '../app.component.scss';
+
+.showInput  {   
+    transform: translateX(-200%);
+    transition: 0.2s ease-in-out;    
+}
+
+.hideInput {
+    transform: translateX(0) !important;
+ }
+
+ .quotesInput   {
+     width: 90%;
+     margin-bottom: 5px;
+ }
+
+ .quotestAuthor {
+    margin-bottom: 5px;
+ }
+ .addQuotation  {
+     background-color: $third-color;
+     color: #fff;
+     border: 2px solid $third-color;
+    &:hover {
+        background-color: #000;
+        border: 2px solid #000;
+    }
+ }
