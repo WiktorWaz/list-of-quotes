@@ -17,22 +17,24 @@ export class ListItemsComponent {
 
   @Output() newVote = new EventEmitter<Votes>();
   
-
-
+  @Output() deleteQuotes = new EventEmitter<deleteItem>();
+  
   addVote(quotation: Quotations, vote: number) {
     this.newVote.emit({ quotation, vote });
   }
 
   removeItem(quotation: Quotations)  {
-    console.log(quotation);  
-    this.quotesAll = this.quotesAll.filter((e: Quotations)=> {
-       return e !== quotation;
-    });    
-    console.log(this.quotesAll);
+    this.deleteQuotes.emit({ quotation });
   }
+
 }
 
 export interface Votes {
   quotation: Quotations;
   vote: number;
 }
+
+export interface deleteItem   {
+  quotation: Quotations;
+}
+

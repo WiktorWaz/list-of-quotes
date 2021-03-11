@@ -36,5 +36,11 @@ export class AppComponent {
     this.sortList();
   }
 
+  deleteItem(quotation: Quotations)  {
+    console.log(quotation);  
+    this.quotesAll = this.quotesAll.filter((e: Quotations)=> {
+       return e !== quotation;
+    });    
+  }
 
 }
