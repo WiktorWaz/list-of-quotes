@@ -15,9 +15,11 @@ export class AppComponent {
   emptyQuotes = "Nie dodano jeszcze żadnego cytatu";
   newDate = new Date();
   quotesAll: Quotations[] = QUOTES;
+  
 
   onNewQuotation(quotation: Quotations) {
        this.quotesAll.unshift(quotation); 
+       console.log(this.quotesAll);
   }
 
   addVote(quotation: Quotations, vote: number) {

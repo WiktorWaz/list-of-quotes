@@ -7,7 +7,7 @@
     </header>
     <main>
       <div id="inputWraper">       
-          <app-quotataion-input (newQuotation)="onNewQuotation($event)" (click)="sortList()" #quotataionInput>
+          <app-quotataion-input (keyup)="0" (newQuotation)="onNewQuotation($event)" (click)="sortList()" #quotataionInput>
           </app-quotataion-input>
         <span *ngIf="quotesAll.length === 0"><h1 style="opacity: 0.5">{{emptyQuotes}}</h1></span>
       </div>
