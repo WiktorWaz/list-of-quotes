@@ -19,7 +19,6 @@ export class AppComponent {
 
   onNewQuotation(quotation: Quotations) {
        this.quotesAll.unshift(quotation); 
-       console.log(this.quotesAll);
   }
 
   addVote(quotation: Quotations, vote: number) {
